@@ -13,8 +13,8 @@ fi
 # you can untar https://github.com/Homebrew/brew/tarball/master
 # anywhere you like.
 if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
-  HOMEBREW_PREFIX="/usr/local"
-  HOMEBREW_REPOSITORY="/usr/local/Homebrew"
+  HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-/usr/local/Homebrew}"
+  HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
   HOMEBREW_CACHE="${HOME}/Library/Caches/Homebrew"
 
   STAT="stat -f"
